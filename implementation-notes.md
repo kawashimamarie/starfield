@@ -232,3 +232,74 @@
 - 事業所評価PDFリンクは本番アップロード時に差し替え予定。
 - 支援プログラムPDFリンクは本番アップロード時に差し替え予定。
 - PDFファイル設置後、各資料名リンクを実PDF URLへ変更すること。
+
+## 2026-06-28 保育園ページ追加修正
+### 参照を試みた旧サイトURL
+- ほしのこキッズルーム: http://www.starfield0714.com/hoshinoko/about.html
+- ほしのこ保育園: http://www.starfield0714.com/hoshinoko_hoiku/
+- ほくほく保育園: http://www.starfield0714.com/hokuhoku/
+
+### 取得状況
+- Codex環境では、ほしのこキッズルーム旧ページはタイムアウト、ほしのこ保育園・ほくほく保育園旧ページはBad Gatewayとなり、本文取得ができませんでした。
+- 既存リニューアルサイト内に掲載済みだった施設名、施設種別、所在地、電話番号、FAXを反映しました。
+- 旧サイト本文から確認すべき保育方針、1日の流れ、年間行事、開所日、開所時間、対象年齢、定員、最寄り駅・交通案内は要確認です。
+
+### 修正したページ
+- facilities/hoshinoko-kids-room.html
+- facilities/hoshinoko-hoikuen.html
+- facilities/hokuhoku-hoikuen.html
+
+### 使用画像
+- ほしのこキッズルーム: images/facility-kidsroom.webp
+- ほしのこ保育園: images/facility-hoikuen.webp
+- ほくほく保育園: images/facility-activity.webp
+
+### リンク先
+- 各ページ下部のお問い合わせ導線: ../contact.html
+- TOPページ・施設一覧ページから各保育園ページへのリンクを設置済み。
+
+## 2026-06-28 保育園ページ方針変更
+- 保育園3施設は既存サイトへ外部リンクで誘導する方針に変更しました。
+- リニューアルサイト内では保育園詳細ページを主要導線に使用しません。
+- 外部リンクには target="_blank" rel="noopener" を設定しています。
+
+### 外部リンク先URL
+- ほしのこキッズルーム: http://www.starfield0714.com/hoshinoko/about.html
+- ほしのこ保育園: http://www.starfield0714.com/hoshinoko_hoiku/
+- ほくほく保育園: http://www.starfield0714.com/hokuhoku/
+
+### 保育園詳細ページの扱い
+- facilities/hoshinoko-kids-room.html
+- facilities/hoshinoko-hoikuen.html
+- facilities/hokuhoku-hoikuen.html
+
+上記ファイルは残していますが、現在は主要導線から未使用です。
+
+## 2026-06-28 児童デイサービス分類・保育園カード修正
+- 旧サイト案内画像の内容に合わせ、児童発達支援の対象を「未就園児〜未就学児」、放課後等デイサービスの対象を「小学1年生〜小学6年生」に修正しました。
+- 児童発達支援の該当施設を「ほしのこキッズ、ほしのこジュニア、スターキッズ千葉」に整理しました。
+- 放課後等デイサービスの該当施設を「ほしのこ中央、ほしのこ池上、ほしのこ大森、ほしのこアルファ、ほしのこジュニア」に整理しました。
+- 修正対象: index.html、facilities.html、guide.html、faq.html、contact.html、disclosure.html、児童デイサービス関連の各施設詳細ページ、支援プログラムページのサービス種別表示。
+- 保育園カードは「対象」表示を削除し、ボタン文言を「詳細を見る」に統一しました。リンク先は既存サイトURLのまま、target="_blank" rel="noopener" を維持しています。
+
+## 2026-06-28 旧サイト原稿ベースの文章修正
+- ユーザー提供の `old-site-text.md` 相当の原稿を正として扱い、旧サイトURLからの推測は行わずに文章を修正しました。
+- 修正ページ: index.html、about.html、facilities.html、guide.html、faq.html、company.html、contact.html、certificate.html、facilities/ 配下の児童デイサービス関連ページ、保育園詳細ページ、disclosure.html、disclosure/program-*.html。
+- 児童発達支援は「未就園児〜未就学児」「就園や就学に向けた日常生活の動作訓練や、他児とのコミュニケーションの取り方などを学ぶ場です。」を反映しました。
+- 放課後等デイサービスは「小学1年生〜小学6年生」「自立した日常生活を営むために必要な訓練や、地域との交流の機会を提供する場です。」を反映しました。
+- にこっと原宿は提供原稿の理念、7つの柱、活動内容、事業所概要、スケジュール、アクセス情報を既存ページに維持しています。
+- 提供原稿にない施設別の活動内容、1日の流れ、保育園詳細、支援プログラムPDF詳細は「要確認」として整理しました。
+
+## 2026-06-28 old-site-text.md 再確認による文章調整
+- `old-site-text.md` として提示された原稿内容を正とし、旧サイトURLから推測した文章追加は行わない方針で再確認しました。
+- 公開ページに残っていた「提供原稿に…」などの内部向け表現を、利用者向けの「要確認」表記へ整理しました。
+- 修正対象: index.html、guide.html、faq.html、recruit.html、facilities/ 配下の保育園・児童デイサービス関連ページ。
+- デザイン、リンク、フォルダ構成、アニメーションは変更していません。
+
+## 2026-06-28 にこっと原宿ページ方針変更
+- 渋谷区にこっと原宿は、リニューアルサイト内で詳細ページを主要導線として使用せず、既存サイトへ外部リンクで誘導する方針に変更しました。
+- `index.html` と `facilities.html` の渋谷区にこっと原宿カードは、`http://www.starfield0714.com/nicotto/` へリンクするように変更しました。
+- 外部リンクには `target="_blank"` と `rel="noopener"` を設定しています。
+- カード内ボタン文言は「詳細を見る」のまま維持しています。
+- `facilities/nicotto-harajuku.html` はファイルとして残していますが、現在は主要導線から未使用です。
+- 外部リンク先: http://www.starfield0714.com/nicotto/
